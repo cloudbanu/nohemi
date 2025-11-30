@@ -6,21 +6,33 @@
 <title>Nohemi Font Text Demo</title>
 
 <style>
+/* Font face with proper relative path */
 @font-face {
   font-family: "Nohemi";
-  src: url("Nohemi.woff2") format("woff2"),
-       url("Nohemi.ttf") format("truetype"),
-       url("Nohemi.otf") format("opentype");
+  src: url("./fonts/Nohemi.woff2") format("woff2"),
+       url("./fonts/Nohemi.ttf") format("truetype"),
+       url("./fonts/Nohemi.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
-body {
+/* Basic reset & global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
   font-family: "Nohemi", sans-serif;
-  background: #fff;
+  background: #ffffff;
   color: #222;
   padding: 40px;
   line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
 }
 
 h1 {
@@ -39,7 +51,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* Alignment examples */
+/* Alignment demo */
 .align-demo p {
   margin: 10px 0;
   background: #f3f3f3;
@@ -47,13 +59,14 @@ h2 {
   border-radius: 6px;
 }
 
-/* Positioning examples */
+/* Position demo */
 .position-demo {
   position: relative;
   height: 200px;
   background: #eef7ff;
   border-radius: 8px;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .position-demo p {
@@ -64,24 +77,19 @@ h2 {
   color: white;
 }
 
-.static {
-  position: static;
-}
-
+.static { position: static; }
 .relative {
   position: relative;
   top: 20px;
   left: 40px;
   background: #ff7b00;
 }
-
 .absolute {
   position: absolute;
   bottom: 10px;
   right: 10px;
   background: #00b894;
 }
-
 .sticky {
   position: sticky;
   top: 0;
