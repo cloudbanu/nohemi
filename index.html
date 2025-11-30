@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nohemi Font Text Demo</title>
+
+<style>
+@font-face {
+  font-family: "Nohemi";
+  src: url("Nohemi.woff2") format("woff2"),
+       url("Nohemi.ttf") format("truetype"),
+       url("Nohemi.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Nohemi", sans-serif;
+  background: #fff;
+  color: #222;
+  padding: 40px;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  border-left: 4px solid #0078ff;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/* Alignment examples */
+.align-demo p {
+  margin: 10px 0;
+  background: #f3f3f3;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Positioning examples */
+.position-demo {
+  position: relative;
+  height: 200px;
+  background: #eef7ff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.position-demo p {
+  width: 200px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #0078ff;
+  color: white;
+}
+
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+  top: 20px;
+  left: 40px;
+  background: #ff7b00;
+}
+
+.absolute {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #00b894;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background: #9b59b6;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #666;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<h1>Nohemi Font & Text Layout Demo</h1>
+
+<section class="align-demo">
+  <h2>Text Alignment</h2>
+  <p style="text-align:left;">This paragraph is aligned to the left.</p>
+  <p style="text-align:center;">This paragraph is centered.</p>
+  <p style="text-align:right;">This paragraph is aligned to the right.</p>
+  <p style="text-align:justify;">This paragraph is justified. It spreads the text evenly so both left and right edges are straight, giving a neat block look.</p>
+</section>
+
+<section>
+  <h2>Text Transform & Spacing</h2>
+  <p style="text-transform:uppercase;">this is uppercase text</p>
+  <p style="text-transform:lowercase;">THIS IS lowercase text</p>
+  <p style="text-transform:capitalize;">each word will start with a capital letter.</p>
+  <p style="letter-spacing:2px;">Letter spacing demo text</p>
+  <p style="word-spacing:15px;">Word spacing example for visual effect</p>
+</section>
+
+<section class="position-demo">
+  <h2>Paragraph Positioning</h2>
+  <p class="static">Static</p>
+  <p class="relative">Relative</p>
+  <p class="absolute">Absolute</p>
+  <p class="sticky">Sticky (scroll test)</p>
+</section>
+
+<footer>Made by Boss 😎 | Nohemi Font Demo</footer>
+
+</body>
+</html>
